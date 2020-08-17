@@ -1,4 +1,5 @@
 import 'package:favorite_locations/providers/great_places.dart';
+import 'package:favorite_locations/screens/add_place.dart';
 import 'package:favorite_locations/screens/places_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -23,6 +24,9 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: PlacesListScreen(),
+        routes: {
+          AddPlaceScreen.routeName : (ctx) => AddPlaceScreen(),
+        },
       ),
     );
   }
